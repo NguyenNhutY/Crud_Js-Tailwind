@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <h1>CRUD Example</h1>
+    
+    <form id="crud-form">
+        <input type="text" id="item" placeholder="Enter an item">
+        <button type="submit" class="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">Add</button>
+    </form>
+    
+    <table class ="table-auto border-separate border border-slate-500 rounded-md">
+        <thead>
+            <tr>
+                <th class="border border-slate-600 rounded-md">ID</th>
+                <th class="border border-slate-600 rounded-md">Item</th>
+                <th class="border border-slate-600 rounded-md">Action</th>
+            </tr>
+        </thead>
+        <tbody id="item-list">
+        </tbody>
+    </table>
+    
+    <button class="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 ...">
+        Save changes
+      </button>
+    <script src="crud.js"></script>
+</body>
+</html>
