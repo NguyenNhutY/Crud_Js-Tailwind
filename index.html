@@ -5,30 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="gr.css">
 </head>
-<body>
-    <h1>CRUD Example</h1>
-    
-    <form id="crud-form">
-        <input type="text" id="item" placeholder="Enter an item">
-        <button type="submit" class="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">Add</button>
-    </form>
-    
-    <table class ="table-auto border-separate border border-slate-500 rounded-md">
-        <thead>
-            <tr>
-                <th class="border border-slate-600 rounded-md">ID</th>
-                <th class="border border-slate-600 rounded-md">Item</th>
-                <th class="border border-slate-600 rounded-md">Action</th>
-            </tr>
+<body class="lg flex justify-content-center bg-black text-white">
+    <div class="border-solid   container my-8 max-width-500px mx-auto px-8">
+        <div class="main align-items-center border-solid border-2  bg-white  my-8 max-width-500px mx-auto px-8">
+            <div class=" ">
+                <h1 class="text-black text-base font-semibold">CRUD Application</h1>
+            </div>
+            <div class="main ">
+            <form action="" method="" id="student_form" class="rounded-md 
+            py-8 
+            max-width-500px 
+            width-500px
+            mx-auto  
+            align-items-center 
+            rounded-md
+            student_form
+            ">
+                <div class="space-y-12">
+                    <div class="border-b border-gray-900/10 pb-12">
+                        <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information
+                        </h2>
+                        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                            <div class="sm:col-span-4">
+                                <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Name</label>
+                                <div class="mt-2">
+                                    <input 
+                                        type="text" 
+                                        name="name" 
+                                        id="name" 
+                                        class="block 
+                                                w-full 
+                                                rounded-md 
+                                                border-0 
+                                                py-1.5 
+                                                text-gray-900 
+                                                shadow-sm 
+                                                ring-1 
+                                                ring-inset 
+                                                ring-gray-300 
+                                                placeholder:text-gray-400 
+                                                focus:ring-2 
+                                                focus:ring-inset 
+                                                focus:ring-indigo-600 
+                                                sm:text-sm 
+                                                sm:leading-6"
+                                                value="">
+                                </div>
+                            </div>
+                            <div class="sm:col-span-4">
+                                <label for="roll" class="block text-sm font-medium leading-6 text-gray-900">Roll on</label>
+                                <div class="mt-2">
+                                    <input id="roll" 
+                                            name="roll" 
+                                            type="text" 
+                                            class="block 
+                                                    w-full 
+                                                    rounded-md 
+                                                    border-0 
+                                                    py-1.5 
+                                                    text-gray-900 
+                                                    shadow-sm 
+                                                    ring-1 
+                                                    ring-inset 
+                                                    ring-gray-300 
+                                                    placeholder:text-gray-400 
+                                                    focus:ring-2 
+                                                    focus:ring-inset 
+                                                    focus:ring-indigo-600 
+                                                    sm:text-sm 
+                                                    sm:leading-6"
+                                                    value="">
+                                                    
+                                </div>
+                            </div>
+                            <div class="sm:col-span-4">
+                                <label for="action" class="block text-sm font-medium leading-6 text-gray-900">Actions</label>
+                                <div class="mt-2">
+                                    <input id="action" 
+                                            name="action" 
+                                            type="text"
+                                            class="block 
+                                                w-full 
+                                                rounded-md 
+                                                border-0 
+                                                py-1.5 
+                                                text-gray-900 
+                                                shadow-sm 
+                                                ring-1 
+                                                ring-inset 
+                                                ring-gray-300 
+                                                placeholder:text-gray-400 
+                                                focus:ring-2 
+                                                focus:ring-inset 
+                                                focus:ring-indigo-600 
+                                                sm:text-sm 
+                                                sm:leading-6"
+                                                value="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="mt-6 flex items-center justify-end gap-x-6">
+                    <button type="submit" class="
+        rounded-md 
+        bg-indigo-600 
+        px-3 
+        py-2 
+        text-sm 
+        font-semibold 
+        text-white 
+        shadow-sm hover:bg-indigo-500 
+        focus-visible:outline 
+        focus-visible:outline-2 
+        focus-visible:outline-offset-2 
+        focus-visible:outline-indigo-600" value=""> Add </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <table class=" bg-white  w-full ">
+        <thead class="bg-black flex text-white w-full">
+          <tr class="flex w-full mb-3">
+            <th class="p-4 w-1/4 text-center">Name</th>
+            <th class="p-4 w-1/4 text-center">Roll on</th>
+            <th class="p-4 w-1/4 text-center">Actions</th>
+          </tr>
         </thead>
-        <tbody id="item-list">
+        <tbody class="bg-grey-light
+        flex 
+        flex-col 
+        items-center 
+        justify-between 
+        overflow-y-scroll 
+        w-full
+        text-black
+        text-base"
+        id="student_list"style="height: 50vh;">
+
         </tbody>
-    </table>
-    
-    <button class="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 ...">
-        Save changes
-      </button>
+        </table>
+    </div>
     <script src="crud.js"></script>
 </body>
 </html>
